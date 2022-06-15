@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GPT-3 Powered AI Endpoint Generator
 
 ## Setup
@@ -36,3 +37,7 @@
    $ flask run
    ```
 
+=======
+# OpenAI-Endpoint-Generator
+API Endpoint Generator using OpenAI's GPT-3 Completions API
+>>>>>>> c0bf23e28b59d7eb4f0b03de9a78f16639e866f7
