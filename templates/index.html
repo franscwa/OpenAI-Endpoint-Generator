@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <title>Endpoint Generator</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='wow.png') }}"
+  />
+
+ <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" /> 
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='photo-grid.css') }}" /> -->
+<body>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+
+  <div class="grid-container">
+ 
+      <header>
+        API Endpoint Generator
+        <h6>Made with OpenAI's GPT-3, an open source NLP machine learning model </h6>
+  </header>
+
+
+  <form action="/" method="post" >
+    <div class="card">
+    <label>Select Language</label>
+		
+      <label class="labelexpanded">
+        <input type="radio" value="Python with Flask" name="serverlang"> <div class="radio-btns"> <img src="{{ url_for('static', filename='python.png') }}"> <p>Python (Flask)</p> </div> 
+      </label>
+      
+      <label class="labelexpanded">
+        <input type="radio" value="Express" name="serverlang"> <div class="radio-btns"> <img src="{{ url_for('static', filename='nodejs-3.png') }}"> <p>Node (Express)</p> </div> 
+      </label>
+      
+      <label class="labelexpanded"> 
+        <input type="radio" value="Go" name="serverlang"checked> <div class="radio-btns"> <img src="{{ url_for('static', filename='go-2.png') }}"> <p>Go</p> </div> 
+      </label>
+    </div>
+    <div class="card">
+      <label >Select Database Provider</label>
+        <label class="labelexpanded">
+          <input type="radio" value="MySql" name="dbprovider"> <div class="radio-btns"> <img src="{{ url_for('static', filename='mysql.png') }}"> <p> MySQL </p> </div> 
+        </label>
+        
+        <label class="labelexpanded">
+          <input type="radio" value="Postgres" name="dbprovider"> <div class="radio-btns"> <img src="{{ url_for('static', filename='postgresql-2.png') }}"> <p> Postgres </p> </div> 
+        </label>
+        
+        <label class="labelexpanded"> 
+          <input type="radio" value="MongoDB" name="dbprovider"checked> <div class="radio-btns"> <img src="{{ url_for('static', filename='mongodb.png') }}"> <p> MongoDB </p> </div> 
+        </label>
+      </div>
+
+      <input class="card" type="textarea" name="endpoints" placeholder="Enter a comma separated list of desired endpoints" required />
+      <input class="card" type="submit" value="Generate Endpoints" />
+
+ 
+    {% if result %}
+  <textarea class="card2">{{ result }}</textarea>
+  {% endif %}
+
+ 
+  </div>
+
+</body>

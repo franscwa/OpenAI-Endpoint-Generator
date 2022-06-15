@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "ColfaxAI";
+    src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+        format("woff2"),
+      url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ColfaxAI";
+    src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+      url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+  body,
+  input {
+    font-size: 16px;
+    line-height: 24px;
+    color: #353740;
+    font-family: "ColfaxAI", Helvetica, sans-serif;
+  }
+  /* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  } */
+  
+  h3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #202123;
+    margin: 16px 0 40px;
+  }
+  /* form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+  } */
+  input[type="text"] {
+    padding: 12px 16px;
+    border: 1px solid #1760af;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+  ::placeholder {
+    color: #8e8ea0;
+    opacity: 1;
+  }
+  input[type="submit"] {
+    padding: 12px 0;
+    color: #fff;
+    background-color: #1760af;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .icon1{
+    max-width: 15vh;
+  }
+  
+  
+  .grid-container{
+    display: grid;
+    grid-template-columns: 25vh 25vh 50vh;
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 10px;
+  }
+  
+  .card {
+    margin-top: 3vh;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 1  rem;
+    color: rgb(0, 0, 0);
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+
+    max-width: 40vh;
+    border-radius: 1px;
+    transition: all 500ms;
+    overflow: hidden;
+    max-width: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card2 {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    margin-left:50vh;
+    margin-bottom:25vh;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(16, 16, 16);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  
+  
+  .leftside {
+    margin-top: 50px;
+    margin-left:50px;
+  }
+  
+  .labelexpanded {
+    font-size: 12px;
+  }
+  
+  .labelexpanded > input {
+    display:none;
+  }
+  
+  .labelexpanded input:checked + .radio-btns {
+      background-color: #253c6a;
+      color: #fff;
+  }
+  
+  .radio-btns {
+    width: 100px;
+    height: 60px;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    text-size-adjust: 25;
+    padding:0;
+    box-shadow: 0 1px #c3c3c3;
+    cursor: pointer;
+    background-color: #eaeaea;
+    float:left;
+    margin-right: 15px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .radio-btns > img {
+    width: 28px;
+    height: 30px;
+  }
