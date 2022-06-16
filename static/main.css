@@ -66,20 +66,19 @@
   
   .grid-container{
     display: grid;
-    grid-template-columns: 25vh 25vh 50vh;
-    grid-auto-rows: minmax(150px, auto);
-    grid-gap: 10px;
+    width: min(90%,75rem);
+    grid-auto-flow:column;
+    margin: 5rem auto;
   }
   
   .card {
-    margin-top: 3vh;
+
     justify-content: center;
     align-items: center;
     background: #353535;
     font-size: 1  rem;
     color: rgb(0, 0, 0);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-
     max-width: 40vh;
     border-radius: 1px;
     transition: all 500ms;
