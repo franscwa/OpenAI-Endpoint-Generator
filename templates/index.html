@@ -25,6 +25,7 @@
         </label>
         <div class="logo">
               <a href="#">API Endpoint Creation Tool</a>
+              <a href="#" class="subheading">By Francisco Garcia</a>
         </div>
         <div class="nav-wrapper">
               <ul>
@@ -37,14 +38,14 @@
 </div>
 
   <section class="glass">
-    <input style=" float:right; margin-left:50vh; margin-top:15vh; position:absolute;"rows="5" type="textarea" name="endpoints" placeholder="Enter a comma separated list of desired endpoints" required />
 
   <div class="grid-container">
 
  
 
   <form action="/" method="post" >
-<p style=" margin-left:8vh; padding:20px;"> Select a server-side language or framework, a database provider, and define HTTP/RESTful methods to have API endpoints generated for you</p>
+
+<p style=" background-color:white; margin-left:10vh; padding:20px; border: 2px black solid; max-width: 38vh;"> Select a server-side language/framework, a database provider, and describe HTTP/RESTful methods to generate code for API endpoints</p>
     <div class="card card-lang">
     <label>Select Language</label>
 		
@@ -76,14 +77,15 @@
       </div>
       
      
-      <input class="card card-heading" style="padding-left:1vh; padding-right:1vh;" type="submit" value="Create Endpoints" />
-      
+      <input class="card card-heading" style="padding-left:1vh; padding-right:1vh; margin:4vh 0vh 0vh 14vh;" type="submit" value="Create Endpoints" />
+      <textarea style="position:absolute; float:left; margin-left:50.5vh; margin-top:-94vh; min-height: 24vh; min-width: 75vh; border: 2px black solid;" name="endpoints" placeholder="Enter a comma separated list of desired endpoints (examples: GET /users/ fetch all users, PATCH /users/ add a new user with an auto-generated ID, an email and password, PUT /users/:id edit user email)" required ></textarea>
+
   
-  <divclass="notediv"><p style="margin-top: 10vh; margin-left:10vh;">Made With</p><img class="logoimg" src="{{ url_for('static', filename='OpenAI_Logo.png') }}" alt="wow" /></div> 
+  <div class="notediv"><p style="margin-top: 10vh; margin-left:10vh;">Made With</p><img class="logoimg" src="{{ url_for('static', filename='OpenAI_Logo.png') }}" alt="wow" /></div> 
 </div>
 
-  {% if result %}
-  <textarea style= "min-width: 70vh; max-height:56vh; margin-top:33vh; margin-right:90%;" class="scrollabletextbox" name="note">
+  {% if true %}
+  <textarea style= "min-width: 75vh; max-height:56vh; margin-top:36vh; margin-right:90%; border:2px black solid ;" class="scrollabletextbox" name="note" placeholder="" autofocus>
    {{result}}
   </textarea>
   {% endif %}

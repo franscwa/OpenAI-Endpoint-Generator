@@ -33,7 +33,7 @@
     padding: 12px 16px;
     border: 1px solid #1760af;
     border-radius: 4px;
-    margin-bottom: 24px;
+   
   }
   ::placeholder {
     color: #8e8ea0;
@@ -80,7 +80,6 @@
     background-repeat: no-repeat;
   }
 
-<<<<<<< HEAD
   .headerimg{
     padding-left: 5%;
     margin-top: 2vh;
@@ -92,8 +91,6 @@
     margin-right:2vh;
     border-radius: 4px;
     font-size: xx-large;
-
-
   }
 
   .logoimg{
@@ -119,13 +116,6 @@
     padding-top: 5vh;
     padding-left: 5vh;
     min-width: 60%;
-=======
-  
-  
-  .leftside {
-    margin-top: 50px;
-    margin-left:50px;
->>>>>>> origin/main
   }
 
   
@@ -164,7 +154,6 @@
     width: 28px;
     height: 30px;
   }
-<<<<<<< HEAD
 
   .glass {
     background: white;
@@ -196,5 +185,7 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-=======
->>>>>>> origin/main
+
+  .subheading{
+    font-size: 1rem;
+  }

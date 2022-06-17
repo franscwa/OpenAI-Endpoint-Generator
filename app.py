@@ -10,6 +10,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 @app.route("/", methods=("GET", "POST"))
 def index():
     if request.method == "POST":
+        #Gets user parameters from HTML form
         serverlang = request.form["serverlang"]
         dbprovider = request.form["dbprovider"]
         endpoints = request.form["endpoints"]
