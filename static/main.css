@@ -17,7 +17,7 @@
   input {
     font-size: 16px;
     line-height: 24px;
-    background: radial-gradient(#26d6a4, #0084f8);
+    background: radial-gradient(#cecece, #cccccc97);
     font-family: "ColfaxAI", Helvetica, sans-serif;
   }
   /* body {
@@ -66,13 +66,13 @@
   
   .grid-container{
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    padding: 10px;
+    width: min(90%,75rem);
+    grid-auto-flow:column;
+    margin: 5rem auto;
   }
   
   .card {
-
+    margin-left:10vh;
     justify-content: center;
     align-items: center;
     background:#8e8ea0;
@@ -89,7 +89,26 @@
     background-repeat: no-repeat;
   }
 
+  .headerimg{
+    padding-left: 5%;
+    margin-top: 2vh;
+    margin-left:2vh;
+    margin-bottom: 2vh;
+    max-height:6vh;
+    color:black;
+    border: 3px solid black;
+    margin-right:2vh;
+    border-radius: 4px;
+    font-size: xx-large;
 
+
+  }
+
+  .logoimg{
+    margin-bottom: 2vh;
+    max-height:4vh;
+    margin-left:10vh;
+  }
   
   .card-heading {
     font-size: 1.5rem;
@@ -99,9 +118,17 @@
     grid-area: header;
     margin-bottom: 2rem;
   }
+  .card-display{
+    margin-top:5%;
+    margin-bottom: 40vh;
+    margin-right: 25vh;
+    margin-left: 5vh;
+    max-height: 70vh;
+    padding-top: 5vh;
+    padding-left: 5vh;
+   
+  }
 
-  
-  
   
   .labelexpanded {
     font-size: 12px;
@@ -154,4 +181,7 @@
     display: flex;
     margin-left: 10vh;
     margin-right: 5vh;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+
+    
   }
