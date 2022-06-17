@@ -14,18 +14,19 @@
 <body>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
+      
 
-
+  <section class="glass">
   <div class="grid-container">
+    <header class="card card-heading">
+      API Endpoint Generator
+      <h6>Made with OpenAI's GPT-3, an open source NLP machine learning model </h6>
+</header>
  
-      <header>
-        API Endpoint Generator
-        <h6>Made with OpenAI's GPT-3, an open source NLP machine learning model </h6>
-  </header>
-
 
   <form action="/" method="post" >
-    <div class="card">
+    <div class="form-grid">
+    <div class="card card-lang">
     <label>Select Language</label>
 		
       <label class="labelexpanded">
@@ -40,7 +41,7 @@
         <input type="radio" value="Go" name="serverlang"checked> <div class="radio-btns"> <img src="{{ url_for('static', filename='go-2.png') }}"> <p>Go</p> </div> 
       </label>
     </div>
-    <div class="card">
+    <div class="card card-db">
       <label >Select Database Provider</label>
         <label class="labelexpanded">
           <input type="radio" value="MySql" name="dbprovider"> <div class="radio-btns"> <img src="{{ url_for('static', filename='mysql.png') }}"> <p> MySQL </p> </div> 
@@ -54,16 +55,18 @@
           <input type="radio" value="MongoDB" name="dbprovider"checked> <div class="radio-btns"> <img src="{{ url_for('static', filename='mongodb.png') }}"> <p> MongoDB </p> </div> 
         </label>
       </div>
-
+      
+      <section class="card card-centro">
       <input class="card" type="textarea" name="endpoints" placeholder="Enter a comma separated list of desired endpoints" required />
       <input class="card" type="submit" value="Generate Endpoints" />
-
+      </section>
+      </div>
  
     {% if result %}
-  <textarea class="card2">{{ result }}</textarea>
+  <section class="card card-view">{{ result }}</section>
   {% endif %}
 
  
   </div>
-
+</section>
 </body>
