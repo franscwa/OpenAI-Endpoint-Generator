@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Endpoint Generator</title>
+  <title>API Creation Tool</title>
   <link
     rel="shortcut icon"
     href="{{ url_for('static', filename='wow.png') }}"
@@ -24,8 +24,8 @@
               <i></i>
         </label>
         <div class="logo">
-              <a href="#">API Endpoint Creation Tool</a>
-              <a href="#" class="subheading">By Francisco Garcia</a>
+              <a href="#">RESTful/HTTP API Creation Tool</a>
+              <h6 style="font-size:x-small;">By Francisco Garcia</h6>
         </div>
         <div class="nav-wrapper">
               <ul>
@@ -45,7 +45,7 @@
 
   <form action="/" method="post" >
 
-<p style=" background-color:white; margin-left:10vh; padding:20px; border: 2px black solid; max-width: 38vh;"> Select a server-side language/framework, a database provider, and describe HTTP/RESTful methods to generate code for API endpoints</p>
+<p style=" background-color:white; margin-left:10vh; padding:20px; border: 2px black solid; max-width: 38vh;"> Choose a server-side language/framework, a database provider, and describe HTTP/RESTful methods to generate code for API endpoints</p>
     <div class="card card-lang">
     <label>Select Language</label>
 		
@@ -85,7 +85,7 @@
 </div>
 
   {% if true %}
-  <textarea style= "min-width: 75vh; max-height:56vh; margin-top:36vh; margin-right:90%; border:2px black solid ;" class="scrollabletextbox" name="note" placeholder="" autofocus>
+  <textarea style= "min-width: 75vh; max-height:56vh; margin-top:36vh; margin-right:90%; border:2px black solid ;" class="scrollabletextbox" name="note" placeholder="Waiting..." autofocus>
    {{result}}
   </textarea>
   {% endif %}

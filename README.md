@@ -1,6 +1,6 @@
 
 #  API Endpoint Generator, powered by GPT-3
-This project leverages OpenAI's GPT-3 Machine Learning Model natural langauge processing capabilities to generate API endpoints semantically in your choice between Python(Flask), JavaScript(Node and Express), and Go in MySQL, Postgres and MongoDB. 
+This project leverages OpenAI's GPT-3 Machine Learning Model NLP capabilitiess to generate API endpoints from semantic user input in your choice between Python(Flask), JavaScript(Node and Express), and Go in MySQL, Postgres and MongoDB. 
 
 ## Setup
 
