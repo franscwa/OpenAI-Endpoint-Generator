@@ -1,10 +1,10 @@
 
 #  API Endpoint Generator, powered by GPT-3
 
-This project leverages the OpenAI GPT-3 Machine Learning Model's NLP capabilities to generate API endpoints from user defined server, database and endpoint parameters
-=======
 
-Backend built with Python & Flask deployed on docker container hosted on AWS Lightsail
+This project leverages the OpenAI GPT-3 Machine Learning Model's NLP capabilities to generate API endpoints from user defined server, database and endpoint parameters
+
+Backend built with Python & Flask deployed on a docker container hosted on AWS Lightsail
 
 
 ## Deployment Instructions
