@@ -1,46 +1,34 @@
 
 #  API Endpoint Generator, powered by GPT-3
-<<<<<<< HEAD
-This project leverages OpenAI's GPT-3 Machine Learning Model NLP capabilitiess to generate API endpoints from semantic user input in your choice between Python(Flask), JavaScript(Node and Express), and Go in MySQL, Postgres and MongoDB. 
+
+This project leverages OpenAI's GPT-3 Machine Learning Model NLP capabilitiess to generate API endpoints from user defined server, database and endpoint parameters
 =======
 This project uses OpenAI's GPT-3 Machine Learning Model natural langauge processing capabilities to generate API endpoints semantically in your choice between Python(Flask), JavaScript(Node and Express), and Go in MySQL, Postgres and MongoDB. 
 
-Backend built with Python & Flask with [Zappa](https://github.com/zappa/Zappa) to connect with AWS lambda
->>>>>>> c5a5e2490d11f32808066042f1572511e93e2866
+Backend built with Python & Flask deployed on docker container hosted on AWS Lightsail
 
-## Setup
 
- Clone this repository
+## Deployment Instructions
 
- Navigate into the project directory
-
-   ```bash
-   $ cd /path/to/repo
-   ```
-
- Create a new virtual environment
-
-   ```bash
-   $ python -m venv venv
-   $ . venv/bin/activate
-   ```
-
- Install the requirements
-
-   ```bash
-   $ pip install -r requirements.txt
-   ```
-
- Make a copy of the example environment variables file
-
+ Duplicate the environment variable example file, and create an [API key](https://beta.openai.com/account/api-keys) and add it to the to the new .env file 
+  
    ```bash
    $ cp .env.example .env
    ```
 
-7. Create an [API key](https://beta.openai.com/account/api-keys) and add it to the to the .env file 
- Run 
 
+Run these commands to deploy containers for the web server, access on http://localhost:<your-port>/
+ 
+ 
  ```bash
- $ flask run
+ $ docker build -t <imageName> .
+ 
+ OR, M1 Compatible multi-arch build
+ 
+ $ docker buildx build --platform=linux/amd64 -t <imageName> .
+ ```
+ 
+ ```bash
+ $ docker run -p <your-port>:5000 <imageName>
  ```
 
