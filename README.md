@@ -24,8 +24,8 @@ Run these commands to deploy containers for the web server, access on localhost:
  $ docker build -t <imageName> .
  ```
  
- M1/ARM64 reccomended build command for multi-arch support
- ```bash
+ For M1/ARM64 devices use this build command for multi-arch support 
+ 
  $ docker buildx build --platform=linux/amd64 -t <imageName> .
  ```
  
