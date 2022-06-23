@@ -13,15 +13,13 @@ from boto3 import resource
 
 app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
-"""
+
 dynamodb = boto3.resource('api-gen-feedback', 
     aws_access_key_id=keys.ACCESS_KEY_ID,
      aws_secret_access_key=keys.SECRET_ACCESS_KEY,
       aws_session_token=keys.SESSION_TOKEN)
     
 
-
-"""
 
 #OpenAI API call
 @app.route("/", methods=("GET", "POST"))
@@ -44,12 +42,12 @@ def index():
     return render_template("index.html", result=result)
 
 #Sends feedback to DynamoDB
-"""
+
 @app.route("/feedback", methods =("POST"))
 def successFeedback(serverlang, dbprovider, endpoints, feedback):
    if request.method == "POST":
-   thisPrompt = request.form["responseprompt"]
-   response = FeedbackTable.put_item(
+    thisPrompt = request.form["responseprompt"]
+    response = FeedbackTable.put_item(
        Response = {
            'prompt'     : thisPrompt,
            'temperature'  : 0.5,
@@ -60,8 +58,8 @@ def successFeedback(serverlang, dbprovider, endpoints, feedback):
 
 def failedFeedback(serverlang, dbprovider, endpoints, feedback):
    if request.method == "POST":
-   thisPrompt = request.form["responseprompt"]
-   response = FeedbackTable.put_item(
+    thisPrompt = request.form["responseprompt"]
+    response = FeedbackTable.put_item(
        Response = {
            'prompt'     : thisPrompt,
            'temperature'  : 0.5,
@@ -70,7 +68,6 @@ def failedFeedback(serverlang, dbprovider, endpoints, feedback):
        }
      )
    
-  """ 
 
 
     
