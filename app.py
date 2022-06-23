@@ -1,3 +1,9 @@
+"""
+This is a Python program that uses the Openai API to generate a code completion. 
+The program takes in user parameters from an HTML form and uses those parameters to generate a prompt. 
+The prompt is then used to generate a code completion which is displayed on the HTML page. 
+The program also has a feedback feature that allows users to send feedback to a database.
+"""
 
 from crypt import methods
 import os
@@ -9,8 +15,8 @@ app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 #FeedbackTable = resource.Table('api-tool-feedback')
-# Homepage
 
+#OpenAI API call
 @app.route("/", methods=("GET", "POST"))
 def index():
     if request.method == "POST":
@@ -22,7 +28,7 @@ def index():
             model="text-davinci-002",
             prompt=generate_prompt(serverlang, dbprovider, endpoints),
             temperature=0.6,
-            max_tokens=512,
+            max_tokens=1024,
         )
 
         return redirect(url_for("index", result=response.choices[0].text))
@@ -30,7 +36,7 @@ def index():
     result = request.args.get("result")
     return render_template("index.html", result=result)
 
-#Sends feedback to the database
+#Sends feedback to DynamoDB
 """
 @app.route("/feedback", methods =("POST"))
 def sendFeedbackToDynamo(serverlang, dbprovider, endpoints, feedback):

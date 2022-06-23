@@ -24,7 +24,7 @@
               <i></i>
         </label>
         <div class="logo">
-              <a href="#">RESTful/HTTP API Creation Tool</a>
+              <a href="#"> API Creation Tool</a>
               <h6 style="font-size:x-small;">By Francisco Garcia</h6>
         </div>
         <div class="nav-wrapper">
@@ -45,7 +45,7 @@
 
   <form action="/" method="post" >
 
-<p style=" background-color:white; margin-left:10vh; padding:20px; border: 2px black solid; max-width: 38vh;"> Choose a server-side language/framework, a database provider, and describe HTTP/RESTful methods to generate code for API endpoints</p>
+<p style=" background-color:white; margin-left:10vh; padding:20px; border: 1px black solid; max-width: 38vh; min-height: 20vh;" > Choose a server-side language/framework, a database provider, and describe HTTP/RESTful methods to generate code for API endpoints</p>
     <div class="card card-lang">
     <label>Select Language</label>
 		
@@ -78,15 +78,19 @@
       
      
       <input class="card card-heading" style="padding-left:1vh; padding-right:1vh; margin:4vh 0vh 0vh 14vh;" type="submit" value="Create Endpoints" />
-      <textarea style="position:absolute; float:left; margin-left:50.5vh; margin-top:-94vh; min-height: 24vh; min-width: 75vh; border: 2px black solid;" name="endpoints" placeholder="Enter a comma separated list of desired endpoints (examples: GET /users/ fetch all users, PATCH /users/ add a new user with an auto-generated ID, an email and password, PUT /users/:id edit user email)" required ></textarea>
+      <textarea style="position:absolute; float:left; margin-left:50.8vh; margin-top:-94vh; min-height:23vh; min-width: 76vh; border: 1px black solid;" name="endpoints" placeholder="Enter a comma separated list of [method] [resource] [description], (examples: GET /users/ fetch all users, POST /users/ add a new user, an email and password, PUT /users/:id edit user email)" required ></textarea>
 
   
-  <div class="notediv"><p style="margin-top: 10vh; margin-left:10vh;">Made With</p><img class="logoimg" src="{{ url_for('static', filename='OpenAI_Logo.png') }}" alt="wow" /></div> 
+<p class="notediv" style="margin-bottom: 2vh; margin-left:70vh; position:absolute;">Powered by<img class="logoimg" src="{{ url_for('static', filename='OpenAI_Logo.png') }}" alt="wow" /></p>
 </div>
 
+<input type="image" style="max-width:25px; max-height:25px; position:absolute; margin-top:93vh; margin-left:80vh;" id="goodfeedback" src="{{ url_for('static', filename='thumb-up.png') }}" alt="Submit Positive Feedback" />
+<input type="image" style="max-width:25px; max-height:25px; position:absolute; margin-top:93vh; margin-left:85vh;" id="badfeedback" src="{{ url_for('static', filename='thumbs-down.png') }}" alt="Submit Negative Feedback" />
+
+ 
   {% if true %}
-  <textarea style= "min-width: 75vh; max-height:56vh; margin-top:36vh; margin-right:90%; border:2px black solid ;" class="scrollabletextbox" name="note" placeholder="Waiting..." autofocus>
-   {{result}}
+  <textarea style= "min-width: 76vh; max-height:56vh; margin-top:36vh; margin-right:60vh; border:1px black solid ;" class="scrollabletextbox" name="note" placeholder="Waiting..." autofocus>
+   {{result if result}}
   </textarea>
   {% endif %}
  
