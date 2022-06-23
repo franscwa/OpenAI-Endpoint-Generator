@@ -46,7 +46,7 @@ def index():
 #Sends feedback to DynamoDB
 """
 @app.route("/feedback", methods =("POST"))
-def sendFeedbackToDynamo(serverlang, dbprovider, endpoints, feedback):
+def successFeedback(serverlang, dbprovider, endpoints, feedback):
    if request.method == "POST":
    thisPrompt = request.form["responseprompt"]
    response = FeedbackTable.put_item(
@@ -57,8 +57,21 @@ def sendFeedbackToDynamo(serverlang, dbprovider, endpoints, feedback):
            'top_p'  : 1
        }
      )
+
+def failedFeedback(serverlang, dbprovider, endpoints, feedback):
+   if request.method == "POST":
+   thisPrompt = request.form["responseprompt"]
+   response = FeedbackTable.put_item(
+       Response = {
+           'prompt'     : thisPrompt,
+           'temperature'  : 0.5,
+           'successful' : False,
+           'top_p'  : 1
+       }
+     )
    
   """ 
+
 
     
 
