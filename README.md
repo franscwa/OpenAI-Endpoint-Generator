@@ -1,40 +1,33 @@
 
 #  API Endpoint Generator, powered by GPT-3
-This project leverages OpenAI's GPT-3 Machine Learning Model natural langauge processing capabilities to generate API endpoints semantically in your choice between Python(Flask), JavaScript(Node and Express), and Go in MySQL, Postgres and MongoDB. 
 
-## Setup
 
- Clone this repository
+This project leverages the OpenAI GPT-3 Machine Learning Model's NLP capabilities to generate API endpoints from user defined server, database and endpoint parameters
 
- Navigate into the project directory
+Backend built with Python & Flask deployed on a docker container hosted on AWS Lightsail
 
-   ```bash
-   $ cd /path/to/repo
-   ```
 
- Create a new virtual environment
+## Deployment Instructions
 
-   ```bash
-   $ python -m venv venv
-   $ . venv/bin/activate
-   ```
-
- Install the requirements
-
-   ```bash
-   $ pip install -r requirements.txt
-   ```
-
- Make a copy of the example environment variables file
-
+ Duplicate the environment variable example file, and create an [API key](https://beta.openai.com/account/api-keys) and add it to the to the new .env file 
+  
    ```bash
    $ cp .env.example .env
    ```
 
-7. Create an [API key](https://beta.openai.com/account/api-keys) and add it to the to the .env file 
- Run 
 
+Run these commands to deploy containers for the web server, runs on https://[host-ip]:[your-port]/
+ 
+ 
  ```bash
- $ flask run
+ $ docker build -t [imageName] .
+ 
+ OR, For M1/ARM64 devices use this build command for multi-arch support 
+ 
+ $ docker buildx build --platform=linux/amd64 -t [imageName] .
+ ```
+ 
+ ```bash
+ $ docker run -p [your-port]:5000 [imageName]
  ```
 

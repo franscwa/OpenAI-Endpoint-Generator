@@ -17,7 +17,7 @@
   input {
     font-size: 16px;
     line-height: 24px;
-    color: #353740;
+    background: radial-gradient(#cecece, #cccccc97);
     font-family: "ColfaxAI", Helvetica, sans-serif;
   }
   
@@ -57,34 +57,67 @@
   .grid-container{
     display: grid;
     width: min(90%,75rem);
-    grid-auto-flow:column;
+    grid-template-columns: 350px 1rem 2rem;
     margin: 5rem auto;
   }
   
   .card {
-
+    margin-left:10vh;
     justify-content: center;
     align-items: center;
-    background: #353535;
+    background:#8e8ea0;
     font-size: 1  rem;
     color: rgb(0, 0, 0);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
     max-width: 40vh;
     border-radius: 1px;
+    margin-bottom: 3px;
     transition: all 500ms;
     overflow: hidden;
-    max-width: 40vh;
+    max-width: 35vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  
-  
-  .leftside {
-    margin-top: 50px;
-    margin-left:50px;
+  .headerimg{
+    padding-left: 5%;
+    margin-top: 2vh;
+    margin-left:2vh;
+    margin-bottom: 2vh;
+    max-height:6vh;
+    color:black;
+    border: 3px solid black;
+    margin-right:2vh;
+    border-radius: 4px;
+    font-size: xx-large;
   }
+
+  .logoimg{
+    margin-bottom: 2vh;
+    max-height:4vh;
+    margin-left:10vh;
+  }
+  
+  .card-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(16, 16, 16);
+    text-align: center;
+    grid-area: header;
+    margin-bottom: 2rem;
+  }
+  .card-display{
+    margin-top:5%;
+    margin-bottom: 40vh;
+    margin-right: 25vh;
+    margin-left: 5vh;
+    max-height: 70vh;
+    padding-top: 5vh;
+    padding-left: 5vh;
+    min-width: 60%;
+  }
+
   
   .labelexpanded {
     font-size: 12px;
@@ -95,8 +128,9 @@
   }
   
   .labelexpanded input:checked + .radio-btns {
-      background-color: #253c6a;
-      color: #fff;
+    
+   background-color: rgba(34, 215, 255, 0.32);
+  
   }
   
   .radio-btns {
@@ -112,11 +146,46 @@
     background-color: #eaeaea;
     float:left;
     margin-right: 15px;
-    padding-top: 5px;
+    padding-top: 8px;
     margin-bottom: 5px;
   }
   
   .radio-btns > img {
     width: 28px;
     height: 30px;
+  }
+
+  .glass {
+    background: white;
+    min-height: 80vh;
+    width: 90%;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex;
+    margin-left: 10vh;
+    margin-right: 5vh;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+
+    
+  }
+
+  .textbox {
+    font-size: 1  rem;
+    color: rgb(0, 0, 0);
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    max-width: 40vh;
+    border-radius: 1px;    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .subheading{
+    font-size: 1rem;
   }

@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <head>
-  <title>Endpoint Generator</title>
+  <title>API Creation Tool</title>
   <link
     rel="shortcut icon"
     href="{{ url_for('static', filename='wow.png') }}"
   />
 
  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" /> 
+ <link rel="stylesheet" href="{{ url_for('static', filename='master.css') }}" /> 
+
 </head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <!-- <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}" />
 <link rel="stylesheet" href="{{ url_for('static', filename='photo-grid.css') }}" /> -->
 <body>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<div class="container">
+  <nav>
+        <input type="checkbox" id="nav" class="hidden">
+        <label for="nav" class="nav-btn">
+              <i></i>
+              <i></i>
+              <i></i>
+        </label>
+        <div class="logo">
+              <a href="#">RESTful/HTTP API Creation Tool</a>
+              <h6 style="font-size:x-small;">By Francisco Garcia</h6>
+        </div>
+        <div class="nav-wrapper">
+              <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="https://github.com/franscwa/OpenAI-Endpoint-Generator">View Source Code on GitHub</a></li>
+              </ul>
+        </div>
+  </nav>
+</div>
 
-
+  <section class="glass">
 
   <div class="grid-container">
- 
-      <header>
-        API Endpoint Generator
-        <h6>Made with OpenAI's GPT-3, an open source NLP machine learning model </h6>
-  </header>
 
+ 
 
   <form action="/" method="post" >
-    <div class="card">
+
+<p style=" background-color:white; margin-left:10vh; padding:20px; border: 2px black solid; max-width: 38vh;"> Choose a server-side language/framework, a database provider, and describe HTTP/RESTful methods to generate code for API endpoints</p>
+    <div class="card card-lang">
     <label>Select Language</label>
 		
       <label class="labelexpanded">
@@ -40,7 +61,7 @@
         <input type="radio" value="Go" name="serverlang"checked> <div class="radio-btns"> <img src="{{ url_for('static', filename='go-2.png') }}"> <p>Go</p> </div> 
       </label>
     </div>
-    <div class="card">
+    <div class="card card-db">
       <label >Select Database Provider</label>
         <label class="labelexpanded">
           <input type="radio" value="MySql" name="dbprovider"> <div class="radio-btns"> <img src="{{ url_for('static', filename='mysql.png') }}"> <p> MySQL </p> </div> 
@@ -54,16 +75,22 @@
           <input type="radio" value="MongoDB" name="dbprovider"checked> <div class="radio-btns"> <img src="{{ url_for('static', filename='mongodb.png') }}"> <p> MongoDB </p> </div> 
         </label>
       </div>
+      
+     
+      <input class="card card-heading" style="padding-left:1vh; padding-right:1vh; margin:4vh 0vh 0vh 14vh;" type="submit" value="Create Endpoints" />
+      <textarea style="position:absolute; float:left; margin-left:50.5vh; margin-top:-94vh; min-height: 24vh; min-width: 75vh; border: 2px black solid;" name="endpoints" placeholder="Enter a comma separated list of desired endpoints (examples: GET /users/ fetch all users, PATCH /users/ add a new user with an auto-generated ID, an email and password, PUT /users/:id edit user email)" required ></textarea>
 
-      <input class="card" type="textarea" name="endpoints" placeholder="Enter a comma separated list of desired endpoints" required />
-      <input class="card" type="submit" value="Generate Endpoints" />
+  
+  <div class="notediv"><p style="margin-top: 10vh; margin-left:10vh;">Made With</p><img class="logoimg" src="{{ url_for('static', filename='OpenAI_Logo.png') }}" alt="wow" /></div> 
+</div>
 
- 
-    {% if result %}
-  <textarea class="card2">{{ result }}</textarea>
+  {% if true %}
+  <textarea style= "min-width: 75vh; max-height:56vh; margin-top:36vh; margin-right:90%; border:2px black solid ;" class="scrollabletextbox" name="note" placeholder="Waiting..." autofocus>
+   {{result}}
+  </textarea>
   {% endif %}
-
  
   </div>
-
+  
+</section>
 </body>
