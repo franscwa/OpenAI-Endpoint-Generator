@@ -17,7 +17,7 @@ Backend built with Python & Flask deployed on docker container hosted on AWS Lig
    ```
 
 
-Run these commands to deploy containers for the web server, access on localhost:<your-port>/
+Run these commands to deploy containers for the web server, access on http://localhost:your-port/
  
  
  ```bash
