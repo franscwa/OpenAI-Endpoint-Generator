@@ -1,12 +1,16 @@
-FROM python:3.9-alpine
+FROM python:3.8-slim
 
 EXPOSE 5000/tcp
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY . .
 
-RUN pip install -r "requirements.txt"
+RUN apt-get update \
+    && apt-get install --yes --no-install-recommends \
+        gcc g++ libffi-dev 
+
+
+RUN pip install -r requirements.txt
 
 COPY app.py .
-

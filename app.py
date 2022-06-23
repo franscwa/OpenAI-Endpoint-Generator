@@ -8,7 +8,7 @@ from boto3 import resource
 app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-FeedbackTable = resource.Table('api-tool-feedback')
+#FeedbackTable = resource.Table('api-tool-feedback')
 # Homepage
 
 @app.route("/", methods=("GET", "POST"))
@@ -31,6 +31,7 @@ def index():
     return render_template("index.html", result=result)
 
 #Sends feedback to the database
+"""
 @app.route("/feedback", methods =("POST"))
 def sendFeedbackToDynamo(serverlang, dbprovider, endpoints, feedback):
    response = FeedbackTable.put_item(
@@ -42,7 +43,7 @@ def sendFeedbackToDynamo(serverlang, dbprovider, endpoints, feedback):
        }
      )
    
-   
+  """ 
 
     
 
@@ -51,4 +52,3 @@ def generate_prompt(serverlang, dbprovider, endpoints):
     return """ Write a program in {} with {} to write API endpoints for the following {}.
 
     """.format(serverlang, dbprovider, endpoints)
-    
