@@ -17,14 +17,15 @@ Backend built with Python & Flask deployed on docker container hosted on AWS Lig
    ```
 
 
-Run these commands to deploy containers for the web server, access on http://localhost:<your-port>/
+Run these commands to deploy containers for the web server, access on localhost:<your-port>/
  
  
  ```bash
  $ docker build -t <imageName> .
+ ```
  
- OR, M1 Compatible multi-arch build
- 
+ M1/ARM64 reccomended build command for multi-arch support
+ ```bash
  $ docker buildx build --platform=linux/amd64 -t <imageName> .
  ```
  
