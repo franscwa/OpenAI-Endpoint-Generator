@@ -9,7 +9,7 @@ Backend built with Python & Flask deployed on a docker container hosted on AWS L
 
 ## Deployment Instructions
 
- Duplicate the environment variable example file, and create an [API key](https://beta.openai.com/account/api-keys) and add it to the to the new .env file 
+ Duplicate the environment variable example file, and create an API Key [free from OpenAI](https://beta.openai.com/account/api-keys) and add it to the to the new .env file 
   
    ```bash
    $ cp .env.example .env
