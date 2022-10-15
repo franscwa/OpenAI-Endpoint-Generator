@@ -22,7 +22,7 @@ Run these commands to deploy containers for the web server, runs on https://[hos
  ```bash
  $ docker build -t [imageName] .
  
- OR, For M1/ARM64 devices use this build command for multi-arch support 
+ OR, For ARM64 devices use this build
  
  $ docker buildx build --platform=linux/amd64 -t [imageName] .
  ```
